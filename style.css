@@ -1,0 +1,73 @@
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #1e8294;
+}
+
+h1 {
+text-align: center;
+padding: 20px;
+background-color: #3b3939;
+color: white;
+}
+
+.restaurant {
+background-color: #1e8294;
+border: 1px solid #ddd;
+padding: 15px;
+border-radius: 5px;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+margin-bottom: 20px;
+box-sizing:border-box;
+}
+
+.restaurant-list {
+list-style: none;
+padding: 0;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+padding: 20px;
+}
+
+.restaurant-item {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+border: 2px solid #ccc;
+padding: 20px;
+background-color: white;
+border-radius: 5px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-item img {
+max-width: 100%;
+height: auto;
+border-radius: 5px;
+}
+
+.restaurant-item h2 {
+margin-top: 10px;
+font-size: 1.2em;
+}
+
+.restaurant-item p {
+margin-top: 5px;
+font-size: 14px;
+}
+
+
+.restaurant h2 {
+margin-top: 0;
+}
+
+.restaurant p {
+margin-bottom: 0;
+font-size: 0.9em;
+color: #666;
+}
+
+
+  
