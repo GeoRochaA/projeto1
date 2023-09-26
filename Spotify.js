@@ -1,53 +1,53 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const albumImage = document.getElementById('album-image');
-    const prevButton = document.getElementById('prev-button');
-    const playButton = document.getElementById('play-button');
-    const nextButton = document.getElementById('next-button');
-    const audio = document.getElementById('audio');
-  
-    const playlist = [
-        { title: 'Música 1', albumArt: 'Taylor Swift Summer.jpg', audioFile: 'Taylor Swift - Cruel Summer.mp3' },
-        { title: 'Música 2', albumArt: 'taylor_swift_album.jpg', audioFile: 'song2.mp3' },
-        { title: 'Música 3', albumArt: 'taylor_swift_album.jpg', audioFile: 'song3.mp3' }
-    ];
-  
-    let currentSongIndex = 0;
-    let isPlaying = false;
-  
-    function playSong(index) {
-        albumImage.src = playlist[index].albumArt;
-        audio.src = playlist[index].audioFile;
-        audio.load();
-        if (isPlaying) {
-            audio.play();
-        }
+const audioPlayer = document.getElementById('audio-player');
+const playButton = document.querySelector('.play-button');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+
+playButton.addEventListener('click', togglePlay);
+prevButton.addEventListener('click', playPrevious);
+nextButton.addEventListener('click', playNext);
+
+let currentTrackIndex = 0;
+
+const playlist = [
+    '01---i miss you much.mp3',
+    '02---stereo Love.mp3',
+    '03---dj rodrigo campus.mp3',
+    '04---reggae remix.mp3',
+    '05---só os loucos sabem.mp3',
+    '06---pupila.mp3',
+    '07---não olhe para trás.mp3',
+    '08---dois rios.mp3',
+    '09---céu azul.mp3',
+    '10---pitty.mp3',
+];
+
+function togglePlay() {
+    if (audioPlayer.paused) {
+        audioPlayer.play();
+        playButton.textContent = 'Pausar';
+    } else {
+        audioPlayer.pause();
+        playButton.textContent = 'Play';
     }
-  
-    function togglePlay() {
-        if (isPlaying) {
-            audio.pause();
-            isPlaying = false;
-            playButton.textContent = 'Reproduzir';
-        } else {
-            audio.play();
-            isPlaying = true;
-            playButton.textContent = 'Pausar';
-        }
+}
+
+function playPrevious() {
+    currentTrackIndex--;
+    if (currentTrackIndex < 0) {
+        currentTrackIndex = playlist.length - 1;
     }
-  
-    playButton.addEventListener('click', togglePlay);
-  
-    prevButton.addEventListener('click', () => {
-        currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
-        playSong(currentSongIndex);
-    });
-  
-    nextButton.addEventListener('click', () => {
-        currentSongIndex = (currentSongIndex + 1) % playlist.length;
-        playSong(currentSongIndex);
-    });
-  
-    // Iniciar com a primeira música
-    playSong(currentSongIndex);
-  });
-  
+    audioPlayer.src = playlist[currentTrackIndex];
+    audioPlayer.play();
+}
+
+function playNext() {
+    currentTrackIndex++;
+    if (currentTrackIndex >= playlist.length) {
+        currentTrackIndex = 0;
+    }
+    audioPlayer.src = playlist[currentTrackIndex];
+    audioPlayer.play();
+}
+
+audioPlayer.addEventListener('ended', playNext);
