@@ -10,16 +10,16 @@ nextButton.addEventListener('click', playNext);
 let currentTrackIndex = 0;
 
 const playlist = [
-    '01---i miss you much.mp3',
-    '02---stereo Love.mp3',
-    '03---dj rodrigo campus.mp3',
-    '04---reggae remix.mp3',
-    '05---só os loucos sabem.mp3',
-    '06---pupila.mp3',
-    '07---não olhe para trás.mp3',
-    '08---dois rios.mp3',
-    '09---céu azul.mp3',
-    '10---pitty.mp3',
+    '01---Anti-Hero.mp3',
+    '02---Blank Space.mp3',
+    '03---cardigan.mp3',
+    '04---Cruel Summer.mp3',
+    '05---Enchanted.mp3',
+    '06---Look What You Made Me Do.mp3',
+    '07---Lover.mp3',
+    '08---Shake it Off.mp3',
+    '09---Style.mp3',
+    '10---You Belong With Me.mp3',
 ];
 
 function togglePlay() {
