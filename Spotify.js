@@ -10,16 +10,16 @@ nextButton.addEventListener('click', playNext);
 let currentTrackIndex = 0;
 
 const playlist = [
-    '01---Anti-Hero.mp3',
-    '02---Blank Space.mp3',
-    '03---cardigan.mp3',
-    '04---Cruel Summer.mp3',
-    '05---Enchanted.mp3',
-    '06---Look What You Made Me Do.mp3',
-    '07---Lover.mp3',
-    '08---Shake it Off.mp3',
-    '09---Style.mp3',
-    '10---You Belong With Me.mp3',
+    './Audios/Anti-Hero.mp3',
+    './Audios/Blank Space.mp3',
+    './Audios/cardigan.mp3',
+    './Audios/Cruel Summer.mp3',
+    './Audios/Enchanted.mp3',
+    './Audios/Look What You Made Me Do.mp3',
+    './Audios/Lover.mp3',
+    './Audios/Shake it Off.mp3',
+    './Audios/Style.mp3',
+    './Audios/You Belong With Me.mp3',
 ];
 
 function togglePlay() {
