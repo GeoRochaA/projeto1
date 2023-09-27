@@ -10,7 +10,7 @@ nextButton.addEventListener('click', playNext);
 let currentTrackIndex = 0;
 
 const playlist = [
-    './Audios/Anti-Hero.mp3',
+    './Audios/Anti Hero.mp3',
     './Audios/Blank Space.mp3',
     './Audios/cardigan.mp3',
     './Audios/Cruel Summer.mp3',
