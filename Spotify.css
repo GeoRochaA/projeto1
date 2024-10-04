@@ -6,7 +6,7 @@ body {
     background-color: rgb(0, 0, 0);
     color: #fff;
     font-family: Arial, sans-serif;
-    text-align: center;
+    text-align: auto;
 }
 .container {
     max-width: 600px;
